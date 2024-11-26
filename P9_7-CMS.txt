@@ -2,9 +2,9 @@ Database Name: P9_7-CMS
 Authors: Faculty (Jacob)
 
 Table Name: StudentRecords
-ID	Name		Programme		Mark
-2402064	Long Xiang Quan	Information Security	80
+ID	Name		Programme		Ma                                                   
 2301234	Joshua Chen	Software Engineering	70.5
-2201234	Isaac Teo	Computer Science	63.4
-2304567	John Levoy	Digital Supply Chain	85.9
+2201234	Isaac Teo	Computer Science	63.4                                              
 2401234	Michelle Lee	Information Security	73.20
+11	TEST	HII	10.00
+111123	UPDATED	HIHI	102.00

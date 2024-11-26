@@ -216,11 +216,15 @@ void update() {
 
             // Move the file pointer back to the beginning of the record
             fseek(f, -oldLength, SEEK_CUR);
-
-            // Overwrite with new data, padding with spaces to match the old length
-            fprintf(f, "%-8d\t%-16s\t%-20s\t%.2f%*s",
-                    newID, newName, newProgramme, newMark, oldLength - 44, "");
-
+			// Overwrite the line with spaces to "delete" it
+			for (int i = 0; i < oldLength; i++) {
+				fputc(' ', f);
+			}
+			// Move the pointer to the end of the file
+			fseek(f, 0, SEEK_END);
+            // Write with new data
+            fprintf(f, "%d\t%s\t%s\t%.2f\n",
+                    newID, newName, newProgramme, newMark);
             break;
         }
     }
